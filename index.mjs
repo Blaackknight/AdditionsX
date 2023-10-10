@@ -37,7 +37,7 @@ async function downloadFilesFromGitHub(owner, repo) {
         let rr = `${filename}`
         list.push(`        curl --progress-bar ${downloadURL} -o "${destinationFolder}\\${filename}" && echo "\\-> ${rr.toUpperCase()} Downloaded."\n        color 0A\n        timeout /T 1 >nul\n        color 0C`)
         if (fileResponse.ok) {
-          const fileData = await fileResponse.buffer();
+          const fileData = await fileResponse.arrayBuffer();
           const filePath = path.join(destinationFolder, filename);
           //fs.writeFileSync(filePath, fileData);
           //console.log(`Le fichier ${filename} a été téléchargé avec succès dans le dossier ${destinationFolder}.`);

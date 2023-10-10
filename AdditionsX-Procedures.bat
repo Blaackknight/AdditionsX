@@ -22,6 +22,14 @@ if "%o%"=="1" (
         )
         echo Downloading files...
         title AdditionsXP [Downloading]
+        curl --progress-bar https://raw.githubusercontent.com/Blaackknight/AdditionsX/main/procedures/GenericFortune.ptpl -o "C:\Users\lolmd\.mcreator\templates\ptpl\GenericFortune.ptpl" && echo "\-> GENERICFORTUNE.PTPL Downloaded."
+        color 0A
+        timeout /T 1 >nul
+        color 0C
+        curl --progress-bar https://raw.githubusercontent.com/Blaackknight/AdditionsX/main/procedures/GolemSpawnProcedure.ptpl -o "C:\Users\lolmd\.mcreator\templates\ptpl\GolemSpawnProcedure.ptpl" && echo "\-> GOLEMSPAWNPROCEDURE.PTPL Downloaded."
+        color 0A
+        timeout /T 1 >nul
+        color 0C
 
         color 0E
         echo Download finish !
