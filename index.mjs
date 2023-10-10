@@ -16,7 +16,7 @@ async function downloadFilesFromGitHub(owner, repo) {
   })
   if (j === "en") w = "Desktop"
   const desktopPath = path.join(process.env.USERPROFILE, w)
-  const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents`;
+  const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents/procedures`;
   const response = await fetch(apiURL);
   if (response.ok) {
     const files = await response.json();
