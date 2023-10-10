@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "node": "^20.7.0",
+    "node-fetch": "^3.3.2",
+    "os": "^0.1.2",
+    "os-locale": "^6.0.2",
+    "path": "^0.12.7",
+    "pkg": "^5.8.1"
+  }
+}
