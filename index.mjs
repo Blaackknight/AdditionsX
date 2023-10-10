@@ -68,11 +68,11 @@ async function downloadFilesFromGitHub(owner, repo) {
     const modifiedData = `@echo off
 chcp 65001 > nul
 color 0E
-title AdditionsX [Selection]\n
-set /p o=Select an option (1, 2, 3) = 
+title AdditionsX [Selection]
+set /p o=Select an option (1, 2, 3)
 if "%o%"=="1" (
     title AdditionsXP [Idle]
-    set /p user_input=Do you want download files ? (Yes/No)\n  
+    set /p user_input=Do you want download files ? (Yes/No) 
     if /i "%user_input%"=="Yes" (\n        if exist "${desktopPath}\\AdditionsX" (\n           echo AdditionsX folder already exist at ${desktopPath}\\\n        ) else (\n           mkdir ${desktopPath}\\AdditionsX && echo AdditionsX folder created at ${desktopPath}\\\n           timeout /T 1 >nul\n           move ${desktopPath}\\AdditionsX-Procedures.bat ${desktopPath}\\AdditionsX\n           timeout /T 1 >nul\n           mklink ${desktopPath}\\AdditionsX-Procedures ${desktopPath}\\AdditionsX\\AdditionsX-Procedures.bat\n           timeout /T 1 >nul\n           attrib +h ${desktopPath}\\AdditionsX\\AdditionsX-Procedures.bat\n        )\n        echo Downloading files...\n        title AdditionsXP [Downloading]\n${txt}\n        color 0E\n        echo Download finish !\n        title AdditionsXP [Finish]\n        timeout /T 3 >nul\n        title AdditionsXP [Closing..]\n        timeout /T 2 >nul\n        exit\n    ) else if /i "%user_input%"=="No" (
         echo Cancelled.
         title AdditionsXP [Cancelled]
@@ -83,7 +83,14 @@ if "%o%"=="1" (
     )
 ) else if "%o%"=="2" (
     title AdditionsXU [Idle]
-    Pause
+    set /p user_input=Do you want update files ? (Yes/No)
+    if /i "%user_input%"=="Yes" (
+      title AdditionsXU [Updating]
+      timeout /T 3 >nul
+      title AdditionsXP [Closing..]
+      timeout /T 2 >nul
+      exit
+    )
 )`;
 
     // Réécriture du fichier avec la ligne ajoutée
@@ -92,7 +99,7 @@ if "%o%"=="1" (
         console.error(err);
         return;
       }
-      console.log('Ligne ajoutée avec succès !');
+      console.log('Lignes ajoutée avec succès !');
     });
   });
 }

@@ -2,12 +2,10 @@
 chcp 65001 > nul
 color 0E
 title AdditionsX [Selection]
-
-set /p o=Select an option (1, 2, 3) = 
+set /p o=Select an option (1, 2, 3)
 if "%o%"=="1" (
     title AdditionsXP [Idle]
-    set /p user_input=Do you want download files ? (Yes/No)
-  
+    set /p user_input=Do you want download files ? (Yes/No) 
     if /i "%user_input%"=="Yes" (
         if exist "C:\Users\lolmd\Bureau\AdditionsX" (
            echo AdditionsX folder already exist at C:\Users\lolmd\Bureau\
@@ -48,5 +46,12 @@ if "%o%"=="1" (
     )
 ) else if "%o%"=="2" (
     title AdditionsXU [Idle]
-    Pause
+    set /p user_input=Do you want update files ? (Yes/No)
+    if /i "%user_input%"=="Yes" (
+      title AdditionsXU [Updating]
+      timeout /T 3 >nul
+      title AdditionsXP [Closing..]
+      timeout /T 2 >nul
+      exit
+    )
 )
