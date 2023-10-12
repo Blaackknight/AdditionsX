@@ -32,6 +32,18 @@ if "%o%"=="1" (
         color 0A
         timeout /T 1 >nul
         color 0C
+        curl --progress-bar https://raw.githubusercontent.com/Blaackknight/AdditionsX/main/procedures/RandomLeaves.ptpl -o "C:\Users\lolmd\.mcreator\templates\ptpl\RandomLeaves.ptpl" && echo "\-> RANDOMLEAVES.PTPL Downloaded."
+        color 0A
+        timeout /T 1 >nul
+        color 0C
+        curl --progress-bar https://raw.githubusercontent.com/Blaackknight/AdditionsX/main/procedures/RandomLogs.ptpl -o "C:\Users\lolmd\.mcreator\templates\ptpl\RandomLogs.ptpl" && echo "\-> RANDOMLOGS.PTPL Downloaded."
+        color 0A
+        timeout /T 1 >nul
+        color 0C
+        curl --progress-bar https://raw.githubusercontent.com/Blaackknight/AdditionsX/main/procedures/RandomPlanks.ptpl -o "C:\Users\lolmd\.mcreator\templates\ptpl\RandomPlanks.ptpl" && echo "\-> RANDOMPLANKS.PTPL Downloaded."
+        color 0A
+        timeout /T 1 >nul
+        color 0C
 
         color 0E
         echo Download finish !
