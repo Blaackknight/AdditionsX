@@ -24,6 +24,10 @@ if "%o%"=="1" (
         color 0A
         timeout /T 1 >nul
         color 0C
+        curl --progress-bar https://raw.githubusercontent.com/Blaackknight/AdditionsX/main/procedures/GenericWoodStripped.ptpl -o "C:\Users\lolmd\.mcreator\templates\ptpl\GenericWoodStripped.ptpl" && echo "\-> GENERICWOODSTRIPPED.PTPL Downloaded."
+        color 0A
+        timeout /T 1 >nul
+        color 0C
         curl --progress-bar https://raw.githubusercontent.com/Blaackknight/AdditionsX/main/procedures/GolemSpawnProcedure.ptpl -o "C:\Users\lolmd\.mcreator\templates\ptpl\GolemSpawnProcedure.ptpl" && echo "\-> GOLEMSPAWNPROCEDURE.PTPL Downloaded."
         color 0A
         timeout /T 1 >nul
